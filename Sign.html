@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Create and Sign Petitions">
+	<meta name="author" content="UMBPetitions">
+	<title>UMB Petitions | Sign A Petiiton</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div id="branding">
+				<img src="./img/UMB_Logo.png" width="60" height="60">
+				<h1>UMB Petitions</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index1.html">Create</a></li>
+					<li class="current"><a href="sign.html">Sign A Petition</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+<script>
+	function clickCounter() {
+   		if(typeof(Storage) !== "undefined") {
+       		if (localStorage.clickcount) {
+        		   localStorage.clickcount = Number(localStorage.clickcount)+1;
+   			} else {
+         		localStorage.clickcount = 1;
+       		}
+       		document.getElementById("result").innerHTML = localStorage.clickcount + " Signatures";
+   		} else {
+       		document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+   		}
+	}
+</script>
+
+<script>
+	function clickCounter2() {
+   		if(typeof(Storage) !== "undefined") {
+       		if (localStorage.clickcount2) {
+        		   localStorage.clickcount2 = Number(localStorage.clickcount2)+1;
+   			} else {
+         		localStorage.clickcount2 = 1;
+       		}
+       		document.getElementById("result2").innerHTML = localStorage.clickcount2 + " Signatures";
+   		} else {
+       		document.getElementById("result2").innerHTML = "Sorry, your browser does not support web storage...";
+   		}
+	}
+</script>
+
+<script>
+	function clickCounter3() {
+   		if(typeof(Storage) !== "undefined") {
+       		if (localStorage.clickcount3) {
+        		   localStorage.clickcount3 = Number(localStorage.clickcount3)+1;
+   			} else {
+         		localStorage.clickcount3 = 1;
+       		}
+       		document.getElementById("result3").innerHTML = localStorage.clickcount3 + " Signatures";
+   		} else {
+       		document.getElementById("result3").innerHTML = "Sorry, your browser does not support web storage...";
+   		}
+	}
+</script>
+
+<div id="main">
+		<div class="container">
+			<article id="main-col">
+				<div class="dark">
+					<ul id="sign">
+						<form action="thanks.html">
+							<li>
+								<p><span class="highlight">Petition Name:</span> Lower Lunch Prices<br>
+								<span class="highlight">Content:</span> The prices for lunch here are absolutely ridiculous! Why should I pay $12 for a meal? Please we need to lower the prices for food here UMB my wallet is already empty enough!
+								</p> 
+								<p><button onclick="clickCounter()" type="submit" class="button_1">Sign this Petition!</button></p>
+							<div id="result"></div>
+							</li>
+							<li>
+								<p><span class="highlight">Petition Name:</span> Lower Parking Rates<br>
+								<span class="highlight">Content:</span> To accomodate the prices of the parking garage on campus, parking prices all over are going up. By signing, you are agreeing to demanding prices to remain the same.
+								</p> <p><button onclick="clickCounter2()" type="button1" class="button_1">Sign this Petition!</button></p>
+								<div id="result2"></div>
+							</li>
+							<li>
+								<p><span class="highlight">Petition Name:</span> Fix Water Fountains So Water Bottles Can Be Filled Up Faster!<br>
+								<span class="highlight">Content:</span> Personally, I'm starting to get sick of some of the water bubblers around campus. Some just don't fill my waterbottle up fast enough and require me to remove and replace my water bottle multiple times becasue of the slow stream of water. Cmon this really shouldn't be an issue that remains for weeks at a time. Please SIGN!!!
+								</p> <p><button onclick="clickCounter3()" type="button2" class="button_1">Sign this Petition!</button></p>
+								<div id="result3"></div>
+							</li>
+						</form>
+					</ul>
+				</div>	
+			</article>
+
+			<aside id="sidebar">
+				<div class="dark">
+					<h3>How To Sign A Petition?</h3>
+					<p>1) Read through the petitions and see which ones you can relate to or agree with!</p>
+					<p>2) If you believe the petition is worthy of your signature, Go ahead and sign it by clicking on the light blue "Sign this Petition!" button!</p>
+					<p>NOTE: To prevent bias signatures, we have removed the counter from the public.</p>
+				</div>			
+			</aside>
+
+	</div>
+
+	<footer>
+		<p>UMB Petitions, Copyright &copy; 2018</p>
+	</footer>
+</body>
+</html>
